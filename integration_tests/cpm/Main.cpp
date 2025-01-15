@@ -1,4 +1,4 @@
-#include <BitmapPlusPlus>
+#include <BitmapPlusPlus.hpp>
 
 int main()
 {
