@@ -12,7 +12,10 @@ env:
 
 jobs:
   build:
-    runs-on: windows-2022
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-2022 ]
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v4
