@@ -8,6 +8,8 @@ foreach(example_file ${EXAMPLES_FILES})
 
     add_executable(${target_name} ${example_file})
     target_link_libraries( ${target_name} bpp::BitmapPlusPlus )
+    target_compile_definitions ( ${target_name} PRIVATE "ROOT_DIR=\"${PROJECT_SOURCE_DIR}\"" )
+    target_compile_definitions ( ${target_name} PRIVATE "BIN_DIR=\"${PROJECT_BINARY_DIR}\"" )
 
     add_test (
         NAME ${target_name}
