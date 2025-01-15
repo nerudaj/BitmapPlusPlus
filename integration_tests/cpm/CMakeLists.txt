@@ -2,7 +2,9 @@ cmake_minimum_required( VERSION 3.10 )
 
 include ( CPM.cmake )
 
-CPMAddPackage ( "gh:nerudaj/BitmapPlusPlus#master" )
+# either define GIT_BRANCH at configure time by "cmake -D GIT_BRANCH=master .."
+# or it is set automatically in CI
+CPMAddPackage ( "gh:nerudaj/BitmapPlusPlus#${GIT_BRANCH}" )
 
 project ( demo )
 
